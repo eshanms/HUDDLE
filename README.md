@@ -82,8 +82,10 @@ These formats make it easier to share, document, and reuse event information.
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/eshanms/HUDDLE.git
 cd HUDDLE
+npm install
+npm run dev
 ```
 
 Replace `<YOUR_GITHUB_REPOSITORY_URL>` with your public GitHub repository URL.
