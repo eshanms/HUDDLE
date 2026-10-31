@@ -1,0 +1,6 @@
+{
+  "name": "HUDDLE",
+  "description": "Plan it. Perfect it. Save it. An intelligent AI-powered event-planning assistant that helps users create events, audit plans, correct mistakes, and rescue events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

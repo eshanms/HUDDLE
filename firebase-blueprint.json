@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and personal preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "Complete event plan containing budget, timeline, day of schedule, audit reports, and rescue history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "tagline": { "type": "string" },
+        "eventType": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "country": { "type": "string" },
+        "countryCode": { "type": "string" },
+        "region": { "type": "string" },
+        "culturalContext": { "type": "string" },
+        "languages": { "type": "array" },
+        "dietaryPreferences": { "type": "array" },
+        "accessibility": { "type": "array" },
+        "customTraditions": { "type": "string" },
+        "location": { "type": "object" },
+        "guestCount": { "type": "number" },
+        "budget": { "type": "object" },
+        "theme": { "type": "object" },
+        "budgetItems": { "type": "array" },
+        "timeline": { "type": "array" },
+        "dayOfSchedule": { "type": "array" },
+        "vendors": { "type": "array" },
+        "risks": { "type": "array" },
+        "nextSteps": { "type": "array" },
+        "auditReports": { "type": "array" },
+        "rescueHistory": { "type": "array" },
+        "revisionHistory": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "eventType", "date", "budget", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile collection"
+    },
+    "/events/{eventId}": {
+      "schema": "Event",
+      "description": "Private event documents owned by users"
+    }
+  }
+}
